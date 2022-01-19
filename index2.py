@@ -891,6 +891,16 @@ def checkThreshold():
         configThreshold = newConfigThreshold
         logger('New Threshold applied', telegram=False, emoji='⚙️')
 
+def refreshGame():
+    pyautogui.hotkey('ctrl', 'shift', 'r')
+    while (currentScreen() == "unknown" or currentScreen() == "login"):
+        checkLogout()
+        sleep(2)
+    while (currentScreen() == "main"):
+        clickButton(teasureHunt_icon_img)
+        sleep(5)
+
+    
 
 def main():
 
@@ -923,6 +933,7 @@ def main():
             last["heroes"] = now
             last["refresh_heroes"] = now
             getMoreHeroes()
+            refreshGame()
 
         if currentScreen() == "main":
             if clickButton(teasureHunt_icon_img):
@@ -941,10 +952,8 @@ def main():
         if now - last["refresh_heroes"] > next_refresh_heroes_positions * 60:
             last["refresh_heroes"] = now
             refreshHeroesPositions()
+            
 
-        if now - last["check_updates"] > check_for_updates * 60:
-            last["check_updates"] = now
-            #checkUpdates()
 
         checkLogout()
         sys.stdout.flush()
