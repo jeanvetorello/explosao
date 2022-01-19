@@ -894,11 +894,15 @@ def checkThreshold():
 def refreshGame():
     pyautogui.hotkey('ctrl', 'shift', 'r')
     while (currentScreen() == "unknown" or currentScreen() == "login"):
-        checkLogout()
-        sleep(2)
-    while (currentScreen() == "main"):
-        clickButton(teasureHunt_icon_img)
-        sleep(5)
+        if currentScreen() == "login":
+            login()
+    #     checkLogout()
+    #     sleep(2)
+    #waitForImage(teasureHunt_icon_img, timeout=30)
+            
+    # while (currentScreen() == "main"):
+    #     clickButton(teasureHunt_icon_img)
+    #     sleep(5)
 
     
 
