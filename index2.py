@@ -937,8 +937,8 @@ def main():
             last["heroes"] = now
             last["refresh_heroes"] = now
             getMoreHeroes()
-            refreshGame()
-
+            if ramdom.randrange(1,2) == 2:
+                refreshGame()
         if currentScreen() == "main":
             if clickButton(teasureHunt_icon_img):
                 logger('Entering treasure hunt', emoji='▶️')
