@@ -780,8 +780,8 @@ def getMoreHeroes():
 
 def checkLogout():
     if currentScreen() == "unknown" or currentScreen() == "login":
-        if positions(connect_wallet_btn_img) is not False:
-            sendTelegramPrint()
+        if positions(connect_wallet_btn_img) is False:
+            #sendTelegramPrint()
             logger('Logout detected', telegram=True, emoji='😿')
             logger('Refreshing page', telegram=True, emoji='🔃')
             # pyautogui.hotkey('ctrl', 'f5')
