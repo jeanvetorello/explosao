@@ -937,7 +937,7 @@ def main():
             last["heroes"] = now
             last["refresh_heroes"] = now
             getMoreHeroes()
-            if ramdom.randrange(1,2) == 2:
+            if random.randrange(1,2) == 2:
                 refreshGame()
         if currentScreen() == "main":
             if clickButton(teasureHunt_icon_img):
