@@ -48,7 +48,7 @@
     #
     # [pt_BR] Intervalo de tempo para verificar se há heróis disponíveis para trabalhar
     # Valor padrão (em minutos): [10,15] [valor minimo, valor maximo]
-    send_heroes_for_work: [23,29]
+    send_heroes_for_work: [30,35]
     
     # [en_US] Time interval to update heroes position in the map
     # Default value (in minutes): [3,5] [min value, max value]
@@ -113,7 +113,7 @@
     #
     # [pt_BR]
     # Valor padrão: 0.9
-    go_to_work_btn: 0.9
+    go_to_work_btn: 0.91
 
     # [en_US]
     # Default value: 0.8

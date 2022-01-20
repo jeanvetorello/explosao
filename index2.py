@@ -703,8 +703,8 @@ def login():
         logger('Login failed, trying again', emoji='😿')
         login_attempts += 1
 
-        if (login_attempts > 3):
-            sendTelegramPrint()
+        if (login_attempts > 10):
+            #sendTelegramPrint()
             logger('+3 login attempts, retrying', telegram=True, emoji='🔃')
             # pyautogui.hotkey('ctrl', 'f5')
             pyautogui.hotkey('ctrl', 'shift', 'r')
