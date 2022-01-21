@@ -785,6 +785,9 @@ def checkLogout():
     if currentScreen() == "unknown" or currentScreen() == "login":
         if positions(connect_wallet_btn_img) is False:
             #sendTelegramPrint()
+            time.sleep(30)
+            if currentScreen() == "main" or currentScreen() == "thunt":
+                return False
             logger('Logout detected', telegram=True, emoji='😿')
             logger('Refreshing page', telegram=True, emoji='🔃')
             # pyautogui.hotkey('ctrl', 'f5')
