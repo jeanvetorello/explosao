@@ -728,7 +728,7 @@ def handleError():
         logger('Refreshing page', telegram=True, emoji='🔃')
         # pyautogui.hotkey('ctrl', 'f5')
         sleep(10)
-        if (currentScreen() == "main" or currentScreen() == "thunt" )
+        if (currentScreen() == "main" or currentScreen() == "thunt" ):
             return False
         pyautogui.hotkey('ctrl', 'shift', 'r')
         waitForImage(connect_wallet_btn_img)
