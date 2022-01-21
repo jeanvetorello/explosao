@@ -727,7 +727,7 @@ def handleError():
         clickButton(ok_btn_img)
         logger('Refreshing page', telegram=True, emoji='🔃')
         # pyautogui.hotkey('ctrl', 'f5')
-        sleep(10)
+        time.sleep(10)
         if (currentScreen() == "main" or currentScreen() == "thunt" ):
             return False
         pyautogui.hotkey('ctrl', 'shift', 'r')
