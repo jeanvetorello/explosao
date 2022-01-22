@@ -909,7 +909,11 @@ def refreshGame():
     # while (currentScreen() == "main"):
     #     clickButton(teasureHunt_icon_img)
     #     sleep(5)
-
+def refreshGame2(): ## refresh quando nao tiver baus
+    c1 = len(positions(chest1, configThreshold['chest'], baseImage, True))
+    c2 = len(positions(chest2, configThreshold['chest'], baseImage, True))
+    c3 = len(positions(chest3, configThreshold['chest'], baseImage, True))
+    c4 = len(positions(chest4, configThreshold['chest'], baseImage, True))
     
 
 def main():
@@ -943,8 +947,8 @@ def main():
             last["heroes"] = now
             last["refresh_heroes"] = now
             getMoreHeroes()
-            if random.randrange(1,2) == 2:
-                refreshGame()
+            #if random.randrange(1,2) == 2:
+            refreshGame()
         if currentScreen() == "main":
             if clickButton(teasureHunt_icon_img):
                 logger('Entering treasure hunt', emoji='▶️')
