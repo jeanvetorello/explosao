@@ -61162,3 +61162,22 @@
  /stop - Stop bot
 2022-02-25 15:40:55 - Multi Account BETA is available. Run: python index-ma.py and not index.py for tests.
 2022-02-25 15:41:02 - Connect wallet button detected, logging in!
+2022-02-25 15:42:45 - Login failed, trying again
+2022-02-25 15:42:59 - Logged in
+2022-02-25 15:43:00 - Search for heroes to work
+2022-02-25 15:43:28 - Sending heroes with green stamina bar to work!
+2022-02-25 15:43:30 - Clicking in 1 heroes with green bar detected.
+2022-02-25 15:43:40 - Clicking in 1 heroes with green bar detected.
+2022-02-25 15:44:00 - Clicking in 1 heroes with green bar detected.
+2022-02-25 15:44:47 - 3 total heroes sent since the bot started
+2022-02-25 15:45:53 - Entering treasure hunt
+2022-02-25 15:49:02 - Refreshing heroes positions
+2022-02-25 15:50:04 - Logout detected
+2022-02-25 15:50:04 - Refreshing page
+2022-02-25 15:50:29 - Connect wallet button detected, logging in!
+2022-02-25 15:52:02 - Logged in
+2022-02-25 15:52:12 - Entering treasure hunt
+2022-02-25 15:55:34 - Refreshing heroes positions
+2022-02-25 15:58:52 - Refreshing heroes positions
+2022-02-25 16:03:00 - Refreshing heroes positions
+2022-02-25 16:05:34 - Shutting down the bot
