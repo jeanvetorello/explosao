@@ -701,14 +701,18 @@ def login():
             logger(
                 'Found glitched sign button. Waiting to check if logged in', emoji='✔️')
         # time.sleep(25)
-        waitForImage(teasureHunt_icon_img, timeout=30)
+        #waitForImage(teasureHunt_icon_img, timeout=30)
+        waitForImage(loginpu, timeout=30)
         handleError()
-    if currentScreen() == "loginup":
+    if currentScreen() == "loginpu":
+        print("login pop up found")
         if clickButton(usernametb):
+            sleep(3,3)
             username = loginData["username"]
             pyautogui.typewrite(username, interval=0.1)   
-            sleep(1,3)  
+            sleep(3,3)  
         if clickButton(passwordtb):
+            sleep(3,3)
             password = loginData["password"]
             pyautogui.typewrite(password,interval=0.1)
             sleep(1,3)
