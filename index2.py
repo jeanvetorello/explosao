@@ -706,17 +706,23 @@ def login():
         handleError()
     if currentScreen() == "loginpu":
         print("login pop up found")
-        if clickButton(usernametb):
-            sleep(3,3)
-            username = loginData["username"]
-            pyautogui.typewrite(username, interval=0.1)   
-            sleep(3,3)  
-        if clickButton(passwordtb):
-            sleep(3,3)
-            password = loginData["password"]
-            pyautogui.typewrite(password,interval=0.1)
-            sleep(1,3)
-        if clickButton(loginbt):
+        setun = False
+        setpw = False
+        while setun == False:
+            if clickButton(usernametb):
+                sleep(3,3)
+                username = loginData["username"]
+                pyautogui.typewrite(username, interval=0.1)   
+                sleep(3,3)  
+                setun = True
+        while setpw == False:
+            if clickButton(passwordtb):
+                sleep(3,3)
+                password = loginData["password"]
+                pyautogui.typewrite(password,interval=0.1)
+                sleep(3,3)
+                setpw = True
+        if (setun == True and setpw == True) and clickButton(loginbt):
            waitForImage(teasureHunt_icon_img, timeout=30) 
 
     if currentScreen() == "main":
