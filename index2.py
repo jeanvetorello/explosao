@@ -59,6 +59,7 @@ try:
     metamaskData = streamConfig['metamask']
     chestData = streamConfig['value_chests']
     offsets = streamConfig['offsets']
+    loginData = streamConfig['login']
 except FileNotFoundError:
     print('Error: config.yaml file not found, rename EXAMPLE-config.yaml to config.yaml inside /config folder')
     print('Erro: Arquivo config.yaml não encontrado, renomear EXAMPLE-config.yaml para config.yaml dentro da pasta /config')
@@ -120,6 +121,11 @@ chest1 = cv2.imread('./images/targets/chest1.png')
 chest2 = cv2.imread('./images/targets/chest2.png')
 chest3 = cv2.imread('./images/targets/chest3.png')
 chest4 = cv2.imread('./images/targets/chest4.png')
+## login popup
+usernametb = cv2.imread('./images/targets/usernametb.png')
+passwordtb = cv2.imread('./images/targets/passwordtb.png')
+loginbt = cv2.imread('./images/targets/loginbt.png')
+loginpu = cv2.imread('./images/targets/loginpu.png')
 
 
 def logger(message, telegram=False, emoji=None):
@@ -606,6 +612,8 @@ def currentScreen():
     elif positions(connect_wallet_btn_img) is not False:
         # sys.stdout.write("\nlogin. ")
         return "login"
+    elif positions(loginpu) is not False:
+        return "loginpu"
     elif positions(character_indicator) is not False:
         # sys.stdout.write("\ncharacter. ")
         return "character"
@@ -695,6 +703,17 @@ def login():
         # time.sleep(25)
         waitForImage(teasureHunt_icon_img, timeout=30)
         handleError()
+    if currentScreen() == "loginup":
+        if clickButton(usernametb):
+            username = loginData["username"]
+            pyautogui.typewrite(username, interval=0.1)   
+            sleep(1,3)  
+        if clickButton(passwordtb):
+            password = loginData["password"]
+            pyautogui.typewrite(password,interval=0.1)
+            sleep(1,3)
+        if clickButton(loginbt):
+           waitForImage(teasureHunt_icon_img, timeout=30) 
 
     if currentScreen() == "main":
         logger('Logged in', telegram=True, emoji='🎉')
@@ -782,6 +801,8 @@ def getMoreHeroes():
 
 
 def checkLogout():
+    if currentScreen() == "loginpu":
+        login()
     if currentScreen() == "unknown" or currentScreen() == "login":
         if positions(connect_wallet_btn_img) is False:
             #sendTelegramPrint()
