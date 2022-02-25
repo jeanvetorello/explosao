@@ -61181,3 +61181,19 @@
 2022-02-25 15:58:52 - Refreshing heroes positions
 2022-02-25 16:03:00 - Refreshing heroes positions
 2022-02-25 16:05:34 - Shutting down the bot
+2022-02-25 16:17:44 - Starting bot...
+2022-02-25 16:17:44 - Join us on BCBOT Telegram group: https://t.me/+WXjrE1Kdb1U1Mzg0
+2022-02-25 16:17:44 - Commands: 
+
+ /print 
+ /map 
+ /bcoin 
+ /invite 
+ /id 
+ /donation 
+ /pix 
+
+ /stop - Stop bot
+2022-02-25 16:17:44 - Multi Account BETA is available. Run: python index-ma.py and not index.py for tests.
+2022-02-25 16:17:50 - Connect wallet button detected, logging in!
+2022-02-25 16:18:13 - Shutting down the bot

@@ -708,14 +708,14 @@ def login():
         print("login pop up found")
         setun = False
         setpw = False
-        while setun == False or (positions(usernametb) > 0):
+        while setun == False or (positions(usernametb) is not False):
             if clickButton(usernametb):
                 sleep(3,3)
                 username = loginData["username"]
                 pyautogui.typewrite(username, interval=0.1)   
                 sleep(3,3)  
                 setun = True
-        while setpw == False or (positions(passwordtb) > 0):
+        while setpw == False or (positions(passwordtb) is not False):
             if clickButton(passwordtb):
                 sleep(3,3)
                 password = loginData["password"]
