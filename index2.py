@@ -724,6 +724,7 @@ def login():
                 setpw = True
         if (setun == True and setpw == True) and clickButton(loginbt):
            waitForImage(teasureHunt_icon_img, timeout=30) 
+           handleError()
 
     if currentScreen() == "main":
         logger('Logged in', telegram=True, emoji='🎉')
